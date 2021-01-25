@@ -6,25 +6,17 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
 @Entity
 @Table(name = "covid2")
 public class CovidTwo {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-
-	public String getPrecautions() {
-		return precautions;
-	}
-
-	public void setPrecautions(String precautions) {
-		this.precautions = precautions;
-	}
-
 	private String breathing;
 
 	private String precautions;
+
+	private String symptomps;
 
 	public String getBreathing() {
 		return breathing;
@@ -42,12 +34,26 @@ public class CovidTwo {
 		this.id = id;
 	}
 
+	public String getSymptomps() {
+		return symptomps;
+	}
 
+	public void setSymptomps(String symptomps) {
+		this.symptomps = symptomps;
+	}
 
+	public String getPrecautions() {
+		return precautions;
+	}
+
+	public void setPrecautions(String precautions) {
+		this.precautions = precautions;
+	}
 
 	@Override
 	public String toString() {
-		return "Covid2 [id=" + id + ", breathing=" + breathing + ", precautions=" + precautions + "]";
+		return "CovidTwo [id=" + id + ", breathing=" + breathing + ", precautions=" + precautions + ", symptomps="
+				+ symptomps + "]";
 	}
 
 }

@@ -19,7 +19,7 @@ public class CovidOne {
 	
 	private String geneticDisorder;
 	
-	private Integer age;
+	private String age;
 	
 	private String gender;
 
@@ -39,14 +39,6 @@ public class CovidOne {
 		this.geneticDisorder = geneticDisorder;
 	}
 
-	public Integer getAge() {
-		return age;
-	}
-
-	public void setAge(Integer age) {
-		this.age = age;
-	}
-
 	public String getGender() {
 		return gender;
 	}
@@ -62,10 +54,20 @@ public class CovidOne {
 		this.id = id;
 	}
 
+	public String getAge() {
+		return age;
+	}
+
+	public void setAge(String age) {
+		this.age = age;
+	}
+
+
+
 
 	@Override
 	public String toString() {
-		return "Covid1 [id=" + id + ", disease=" + disease + ", geneticDisorder=" + geneticDisorder + ", age=" + age
+		return "CovidOne [id=" + id + ", disease=" + disease + ", geneticDisorder=" + geneticDisorder + ", age=" + age
 				+ ", gender=" + gender + "]";
 	}
 }

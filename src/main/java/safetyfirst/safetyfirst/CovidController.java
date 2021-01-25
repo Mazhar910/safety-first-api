@@ -37,6 +37,7 @@ public class CovidController {
 
 	@RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, value = "/covidThree")
 	public ResponseEntity<CovidThree> createCovidThree(@RequestBody CovidThree covid3) {
+		System.out.println("inside covid 3");
 		return ResponseEntity.ok(covidThreeRepository.save(covid3));
 	}
 	@RequestMapping(method = RequestMethod.GET, value = "/getCovidOne")

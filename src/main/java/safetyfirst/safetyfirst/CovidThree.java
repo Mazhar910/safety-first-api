@@ -14,7 +14,6 @@ public class CovidThree {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	
 	private String face;
 
 	private String dehydration;
