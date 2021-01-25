@@ -25,7 +25,7 @@ public class DoctorController {
 
 	@RequestMapping(method = RequestMethod.GET, value = "/doctors")
 	public ResponseEntity<List<Doctor>> fetch() {
-		return ResponseEntity.ok(doctorRepository.findAll());
+		return ResponseEntity.ok(doctorRepository.findAllByStatus("active"));
 	}
 
 }
